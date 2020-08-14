@@ -1,0 +1,138 @@
+% This is samplepaper.tex, a sample chapter demonstrating the
+% LLNCS macro package for Springer Computer Science proceedings;
+% Version 2.20 of 2017/10/04
+%
+\documentclass[runningheads]{llncs}
+%
+\usepackage{graphicx}
+\usepackage{amsmath,amsfonts,amssymb,latexsym}
+\usepackage[utf8]{inputenc}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+\usepackage{float}
+\usepackage{dirtytalk}
+\usepackage{apacite}
+\usepackage[spanish]{babel}
+
+% Used for displaying a sample figure. If possible, figure files should
+% be included in EPS format.
+%
+% If you use the hyperref package, please uncomment the following line
+% to display URLs in blue roman font according to Springer's eBook style:
+% \renewcommand\UrlFont{\color{blue}\rmfamily}
+
+\begin{document}
+%
+% Titulo del documento
+\title{Documento ejemplo}
+%
+%\titlerunning{Abbreviated paper title}
+% If the paper title is too long for the running head, you can set
+% an abbreviated paper title here
+%
+
+% Por favor reemplace con la inicial del nombre y el apellido
+\author{G. Gonzalez, J. Parra, A. Rodriguez, R. Arias}
+%
+%\authorrunning{F. Author et al.}
+% First names are abbreviated in the running head.
+% If there are more than two authors, 'et al.' is used.
+%
+
+
+% Las tildes se pueden escribir utilizando \'{vocal}
+% El caracter \\ significa salto de linea
+% Si hay algun caracter especial utilice \ a su lado izquierdo
+% Cambie su numero de grupo y sección asignada
+\institute{\textbf{Grupo \#0 \\ 
+Sección \# 0 \\
+Infraestructura de Comunicaciones \\
+Departamento de Ingenier\'{i}a de Sistemas y Computaci\'{o}n \\
+	Universidad de Los Andes\\
+	Bogot\'{a}, Colombia}}
+
+%\authorrunning{F. Author et al.}
+% First names are abbreviated in the running head.
+% If there are more than two authors, 'et al.' is used.
+%
+%
+\maketitle              % typeset the header of the contribution
+%
+%
+%
+%
+%\\
+
+% El comando \{section} permite crear una nueva sección en el documento
+% para mas detalles: % https://www.overleaf.com/learn/latex/sections_and_chapters
+\section{Sección 1}
+
+%El texto se coloca en plano.
+%Para el salto de linea para mas de un espacio utilice \\
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum, lacus vitae placerat aliquet, est mi egestas nunc, sit amet finibus massa nunc in velit. Ut scelerisque leo sit amet lectus tempus vestibulum. In placerat tristique varius. Aenean pretium ligula id convallis sollicitudin. Donec id est sit amet lorem sollicitudin malesuada. Ut pulvinar tincidunt mollis. Etiam volutpat mi at ipsum iaculis laoreet.
+
+%Para colocar algon en negrilla utilice el comando \textbf{}
+\textbf{Lorem} ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum, lacus vitae placerat aliquet, est mi egestas nunc, sit amet finibus massa nunc in velit. Ut scelerisque leo sit amet lectus tempus vestibulum. In placerat tristique varius. Aenean pretium ligula id convallis sollicitudin. Donec id est sit amet lorem sollicitudin malesuada. Ut pulvinar tincidunt mollis. Etiam volutpat mi at ipsum iaculis laoreet.
+
+%Si desea escribir una ecuación:
+% _{ij} permite denotar subindices
+% ^{t} permite denotar superindices
+\begin{equation}
+    X_{ij}^{t}=(x_{i1},x_{i2},...,x_{in})^T,  i \in \{1,...,P\}, j \in \{1,..,n\}
+\end{equation}
+
+% Para las citas utilice el comando \cite{ref}. Las referencias (ref)
+% Se deben colocar en un formato .bib como el dejado en este proyecto.
+Elemento citado de \cite{almeida}
+
+%Sección 2
+\section{Seccion 2}
+
+% El comando sub-section permite agregar sub-secciones a los documentos
+\subsection{Subsección 2-1}
+Subsección 2-1 
+
+% El comando sub-sub-section permite agregar sub-secciones anidadas a las anteriores ya declaradas
+\subsubsection{Subseccion 2-1-1}
+
+%Para incluir una lista no enumerada utilice el comando \begin{itemize} para una numerada \begin{enumerate}
+% y para cada declarar cada elemento utilice \item
+\begin{itemize}
+    \item Item 1
+    \item Item 2
+\end{itemize}
+
+\subsubsection{Subseccion 2-1-2}
+
+\begin{enumerate}
+    \item Item 1
+    \item Item 2
+\end{enumerate}
+
+\subsection{Subsección 2-2}
+Subsección 2-2
+
+% Para cargar una imagen en el documento utilice el comando
+% \begin{figure}
+% https://es.overleaf.com/learn/latex/Inserting_Images
+% Le recomendamos que lea la sección de posicionamiento
+% de la referencia
+\begin{figure}
+    \centering %Pone la imagen en el centro
+    % Carga la imagen y la dimensiona (atributo scale)
+    % Entre {} se indica la ruta de la imagen
+    \includegraphics[scale=0.2]{images/joker.jpg}
+    % \caption{} es la leyenda de la figura
+    \caption{Despues de leer este pequeño tutorial}
+\end{figure}
+
+% Nombre del archivo .bib que contiene la bibliografia
+% PD: Si te gusta la optimización te recomiendo este articulo.
+% Un saludo y que tengas un excelente día
+% Geovanny
+\bibliography{biblio}
+
+%Formato de citas y referencias
+\bibliographystyle{apacite}
+
+\end{document}
