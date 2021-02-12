@@ -1,0 +1,149 @@
+% En este ejemplo vamos a trabajar a una sola columna, si usted
+% desea trabajar a dos columnas, elimine la opción: onecolumn
+%
+% Importar paquetes
+\documentclass[conference, onecolumn]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+% Construir el indice (marcadores en el PDF)
+\makeindex
+
+% Documento
+\begin{document}
+
+% Titulo del documento
+\title{Titulo del documento}
+
+% Seccion de autores. Si desea agregar mas, añada mas bloques 
+% IEEEauthorblockN y IEEEauthorblockA
+\author{
+% Autor 1 - Nombres
+\IEEEauthorblockN{1\textsuperscript{st} Pepito Perez}
+% Autor 1 - Institución y correo
+\IEEEauthorblockA{\textit{Departamento de Ingeniería de Sistemas y Computación} \\
+\textit{Ingeniería de Sistemas y Computación} \\
+\textit{Universidad de los Andes} \\
+Bogotá, Colombia \\
+autor1@uniandes.edu.co}
+%
+% Coloque el comando \and cada vez que vaya a agregar un nuevo
+% autor
+\and
+% Autor 2 - Nombres
+\IEEEauthorblockN{2\textsuperscript{nd} Autor 2}
+% Autor 2 - Institución y correo
+\IEEEauthorblockA{\textit{Departamento de Ingeniería de Sistemas y Computación} \\
+\textit{Ingeniería de Sistemas y Computación} \\
+\textit{Universidad de los Andes} \\
+Bogotá, Colombia \\
+autor2@uniandes.edu.co}
+%
+}
+
+% Construir el titulo
+\maketitle
+
+% El texto se ingresa en plano y las secciones, ecuaciones, imagenes y tablas se expresan mediante diversos comandos. Estos inician con el caracter "\". Los comentarios se expresan con el caracter %. En caso de necesitar los caracteres especiales para expresar contenido como texto plano, por ejemplo el signo porcentaje "%", añada una linea de escape. Por ejemplo, \%.
+%
+% Abstract
+\begin{abstract}
+En el presente documento tiene como fin servir como plantilla para desarrollar documentos en Latex. En el código hay presentes múltiples comentarios para servir de introducción.
+\end{abstract}
+
+% Palabras clave.
+\begin{IEEEkeywords}
+Sistemas de recomendación, Pinterest
+\end{IEEEkeywords}
+
+% El comando secciones permite estructurar el contenido del documento, existen varias opciones como capitulos, subsecciones y otros. Para detalles consulte en: https://www.overleaf.com/learn/latex/sections_and_chapters
+\section{Sección 1 }
+%
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc egestas dolor imperdiet nulla gravida, id venenatis orci volutpat. Cras orci arcu, malesuada in dapibus a, bibendum ut ex. Donec pretium purus et tellus posuere congue. Nam luctus tortor id lobortis condimentum. Maecenas viverra bibendum nisi, ut bibendum odio dignissim ac. Etiam nec congue leo. Sed velit ipsum, laoreet id pharetra sed, elementum a libero.
+
+Nulla facilisi. Quisque lorem elit, blandit vel metus ut, vehicula sodales metus. In sed faucibus arcu, et venenatis magna. Vivamus tempus placerat sapien, at tincidunt lacus ullamcorper eu. Duis mauris ligula, dapibus vel ultrices nec, mollis non metus. Sed sed elit ex. Phasellus malesuada efficitur purus, eu hendrerit lectus viverra nec. Aenean dignissim nisi lacus, eu cursus lorem interdum vehicula. Morbi iaculis eros ut massa sollicitudin cursus.
+%
+\subsection{Subsección 1}
+%
+Nulla facilisi. Quisque lorem elit, blandit vel metus ut, vehicula sodales metus. In sed faucibus arcu, et venenatis magna. Vivamus tempus placerat sapien, at tincidunt lacus ullamcorper eu. Duis mauris ligula, dapibus vel ultrices nec, mollis non metus. Sed sed elit ex. Phasellus malesuada efficitur purus, eu hendrerit lectus viverra nec. Aenean dignissim nisi lacus, eu cursus lorem interdum vehicula. Morbi iaculis eros ut massa sollicitudin cursus.
+%
+% Para incluir imagenes utilice el comando \begin{figure}.
+% Al momento de crear el bloque le saldran mas opciones como:
+% caption: Leyenda de la imagen
+% label: Es un tag para referenciar este contenido en otras partes del texto. Los label deben ser unicos. Para referenciarlos utilice \ref{<label-deseado>}
+% centerline{<contenido>}: Centra la figura
+% includegraphics: Incluye la imagen. Tiene un atributo denominado scale el cual es un valor en [0, infinito) indicando el porcentaje del tamaño de la imagen original.
+%
+\section{¿Cómo incluir imagenes?}
+%
+Una nueva imagen que vamos a dejar en la carpeta imagenes
+%
+% Los parametros de begin figure [htbp] son parametros para su posicionamiento, evite cambiarlos. LaTex se encarga de acomodar las imagenes de acuerdo al texto y al espacio sobrante. En caso de observar que su imagen no se acomode a su proposito, le recomiendo cambiar la escala de la imagen o seguir ingresando texto. Para mas detalles de los parametros consulte: https://www.overleaf.com/learn/latex/Positioning_of_Figures
+\begin{figure}[htbp]
+    % scale=0.3 es el 30% del tamaño original
+    \centerline{\includegraphics[scale=0.3]{imagenes/joker.jpg}}
+    \caption{Después de leer la introducción}
+    \label{fig:feed_inicial}
+\end{figure}
+%
+% Ecuaciones, modificadores de texto, pies de pagina y enlaces internos y externos.
+\section{Ecuaciones, modificadores de texto, pies de pagina y enlaces internos y externos}
+%
+En primer lugar ingresemos una ecuación.
+% 
+% Para ingresar una ecuación ingrese un bloque \begin{equation}
+% tambien puede usar el modo matematico con el operador $$<expresion matematica>$$
+% Regresion lineal:
+\begin{equation}
+    \hat{Y} = \sum_{i \in X}{\beta_i X_i} + \beta_0 + \epsilon
+\end{equation}
+%
+% Con expresiones matematicas: Promedio
+$$\Bar{X} = \frac{\sum_{a \in X}{X_a}}{|X|}$$
+%
+Posteriormente vamos a ver los modificadores de texto.
+% Se me olvidaba algo muy importante para agregar espacios utilice el operador "\\" eso es un espaciado "\\\\" es salto de linea
+%
+% Para mas detalles de los simbolos matematicos consulte: https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols
+%
+% Para realizar texto en negrilla use el comando \textbf{<texto>}
+\\\\
+Texto en negrita: 
+\textbf{Hola mundo :D}
+\\\\
+Texto en itálica:
+\textit{Espero que estés teniendo un día maravilloso}
+\\\\
+Texto subrayado:
+\underline{Una bonita frase subrayada}
+\\\\
+Pies de pagina y enlaces:
+% Para añadir un pie de pagina utilice el comando \footnote y para añadir enlaces externos utilice el comando \url. Para referencias internas use \ref{<label>}. Para mas detalles consulte: https://es.overleaf.com/learn/latex/Hyperlinks
+Siga el siguiente enlace: \footnote{Un bonito pie de pagina}
+Ingresar a YouTube: \href{https://www.youtube.com/}{YouTube}
+%
+\\\\
+% Realizar cita. El tag debe corresponder al del .bib
+Una bonita cita sobre el libro de Ullman. PD: Muy interesante para conceptos fundamentales sobre Big Data. \cite{leskovec_mining_2020}
+
+
+% Para concluir, vamos a ingresar citas. Para ello nos vamos a apoyar en el formato .bib. Para activarlas, es necesario establecer el formato, referenciar el archivo de citas y citar.
+%
+% Estilo de bibliografia
+\bibliographystyle{IEEEtran}
+
+% Generalmente dejamos el archivo aparte. Asimismo para citar en .bib se requieren lineamientos especiales. Forma facil: ingrese a Zoterobib, ingrese los datos y exporte la cita en formato BibTex
+% Zoterobib: https://zbib.org/
+%
+% Archivo de citas, recuerde debe hacer la cita respectiva
+\bibliography{citas.bib}
+\end{document}
